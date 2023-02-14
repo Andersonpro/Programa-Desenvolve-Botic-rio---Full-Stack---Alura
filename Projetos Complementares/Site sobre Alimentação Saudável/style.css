@@ -1,0 +1,116 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.fundo-pacman {
+    background: #0a0a23;
+    width: 100%;
+    height: 200px;
+}
+
+.logo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    color: #f1be32;
+    left: 20px;
+    top: 25px;
+}
+
+.imagem-pacman {
+    transition: 8s linear;
+    position: absolute;
+    left: -80px;
+    top: 170px;
+}
+
+.imagem-fantasma {
+    transition: 8s linear;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -120px;
+    top: 170px;
+}
+
+.fundo-pacman:hover .imagem-pacman {
+    transform: translateX(calc(100vw + 40px));
+}
+
+.fundo-pacman:hover .imagem-fantasma {
+    transform: translateX(calc(100vw + 40px));
+}
+
+.fundo-pacman:not(:hover) .imagem-fantasma,
+.fundo-pacman:not(:hover) .imagem-pacman {
+    transition: 0s;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 90px;
+    right: 0;
+}
+
+.nav-bar li {
+    display: inline;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #f1be32;
+}
+
+.nav-bar a:hover {
+    color: #acd157;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    background: #FEFEFE;
+    padding: 20px 0;
+}
+
+.historia h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.telejogo {
+    width: 20%;
+    float: left;
+    margin: 0 10px 0 50px;
+}
+
+.historia p {
+    padding: 0 50px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+@media screen and (max-width: 480px) {
+    .fundo-pacman {
+        position: static;
+        height: 300px;
+    }
+
+    .logo {
+        position: static;
+    }
+
+    .nav-bar {
+        position: static;
+    }
+
+    .nav-bar li {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
